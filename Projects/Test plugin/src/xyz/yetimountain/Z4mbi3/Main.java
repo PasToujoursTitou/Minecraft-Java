@@ -24,8 +24,14 @@ getServer().getPluginManager().registerEvents(this,this);
 	public void onPlayerJoin(PlayerJoinEvent event)
 	{
 		Player player = event.getPlayer();
-		event.setJoinMessage("Test hehe" + player.getName());
-		Bukkit.broadcastMessage(ChatColor.AQUA + "Test");
+		if(player.isOp())
+		{
+		Bukkit.broadcastMessage(ChatColor.GREEN + "Administrator " + player.getName() + " has connected.");
+		}
+		else 
+		{
+		Bukkit.broadcastMessage(ChatColor.AQUA + "Welcome " + player.getName() + " for the first time on the server.");
+		}
 	}
 		
 }

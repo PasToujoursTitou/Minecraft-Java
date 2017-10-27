@@ -22,6 +22,18 @@ public class Main extends JavaPlugin
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
 	{
-		
+		if(sender == isOP())
+		{
+			if(cmd.getName().equalsIgnoreCase("gm 0"))
+			{
+				sender.SetGameMode("GameMode.SURVIVAL")
+				return true;
+			}
+			if(cmd.getName().equalsIgnoreCase("gm 1"))
+			{
+			
+				return true;
+			}
+		}
 	}
 }

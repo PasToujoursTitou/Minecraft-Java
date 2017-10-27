@@ -1,12 +1,12 @@
 package xyz.yetimountain.Z4mbi3;
 
 
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 
@@ -14,6 +14,7 @@ public class Main extends JavaPlugin implements Listener{
 	
 	public Main plugin;
 	
+	@Override
 	public void onEnable() {
         getConfig().options().copyDefaults(true);
 getServer().getPluginManager().registerEvents(this,this);
@@ -24,14 +25,20 @@ getServer().getPluginManager().registerEvents(this,this);
 	public void onPlayerJoin(PlayerJoinEvent event)
 	{
 		Player player = event.getPlayer();
-		if(player.isOp())
+		if(player.hasPlayedBefore())
 		{
-		Bukkit.broadcastMessage(ChatColor.GREEN + "Administrator " + player.getName() + " has connected.");
+		event.setJoinMessage(ChatColor.GREEN + player.getName() + " has connected to the server !");
 		}
-		else 
+		else
 		{
-		Bukkit.broadcastMessage(ChatColor.AQUA + "Welcome " + player.getName() + " for the first time on the server.");
+		event.setJoinMessage(ChatColor.AQUA + "Welcome " + player.getName() + " for the first time on the server.");
 		}
+	}
+	@EventHandler
+	public void onPlayerQuit(PlayerQuitEvent event)
+	{
+		Player player = event.getPlayer();
+		event.setQuitMessage(ChatColor.RED + player.getName() + " has left the server.");
 	}
 		
 }

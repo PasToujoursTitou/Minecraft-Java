@@ -4,8 +4,6 @@ import java.util.logging.Level;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerJoinEvent;
@@ -28,8 +26,8 @@ public class Main extends JavaPlugin{
 		@EventHandler
 		public void onPlayerJoin(PlayerJoinEvent event)
 		{
-			Player player = event.getPlayer();
-			player.sendMessage(ChatColor.AQUA + "Welcome to the server!\\nType /info for the overview of all commands.");
+			Player p = event.getPlayer();
+			p.sendMessage(ChatColor.AQUA + "Welcome to the server!\\nType /info for the overview of all commands.");
 			
 		}
 		

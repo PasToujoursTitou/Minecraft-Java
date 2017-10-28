@@ -8,7 +8,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.java.JavaPlugin;
-
+//Plugin done when able to create welcome message "Ingame".
 
 public class Main extends JavaPlugin implements Listener{
 	
@@ -16,10 +16,11 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@Override
 	public void onEnable() {
-        getConfig().options().copyDefaults(true);
-getServer().getPluginManager().registerEvents(this,this);
-        saveConfig();
+		getConfig().options().copyDefaults(true);
+		getServer().getPluginManager().registerEvents(this,this);
+		        saveConfig();
     }
+
 	
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent event)
@@ -27,13 +28,15 @@ getServer().getPluginManager().registerEvents(this,this);
 		Player player = event.getPlayer();
 		if(player.hasPlayedBefore())
 		{
-		event.setJoinMessage(ChatColor.GREEN + player.getName() + " has connected to the server !");
+			event.setJoinMessage(ChatColor.GREEN + player.getName() + " has connected to the server !");
 		}
 		else
 		{
-		event.setJoinMessage(ChatColor.AQUA + "Welcome " + player.getName() + " for the first time on the server.");
+			event.setJoinMessage(ChatColor.AQUA + "Welcome " + player.getName() + " for the first time on the server.");
+			
 		}
 	}
+	
 	@EventHandler
 	public void onPlayerQuit(PlayerQuitEvent event)
 	{

@@ -32,17 +32,19 @@ public class Nickname extends JavaPlugin implements Listener
 		{
 			if(args.length == 0)
 			{
+				//Give message that you need to try to use /nickname (name) (nickname)
 				player.sendMessage(ChatColor.RED + "Try to use /nickname (name) (nickname).");
 			}
 			else
 			{
 				if(args[0].equals(name))
 				{
+					//Give message that you need to try to use /nickname (name) (nickname)
 					player.sendMessage(ChatColor.RED + "Try to use /nickname (name) (nickname).");
 				}
 				if(args[0].equals(name) && args[1].equals(nick))
 				{
-					player.setDisplayName(ChatColor.translateAlternateColorCodes('§', "§e" + player.getDisplayName()));
+					//Main command: /nickname (name) (nickname)
 				}
 			}
 		}

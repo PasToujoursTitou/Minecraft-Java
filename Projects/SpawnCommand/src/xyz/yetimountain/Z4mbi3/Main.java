@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package xyz.yetimountain.Z4mbi3;
 
 import org.bukkit.ChatColor;
@@ -69,3 +70,10 @@ public class Main extends JavaPlugin implements Listener
 		return false;
 	}
 	}
+=======
+package xyz.yetimountain.Z4mbi3;
+
+public class Main {
+
+}
+>>>>>>> 90e9695e56078137b3263786b54281088dfdfb9c

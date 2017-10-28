@@ -12,12 +12,12 @@ public class Main extends JavaPlugin implements Listener
 {
 	public Main plugin;
 	
+	@Override
 	public void onEnable()
 	{
 		System.out.println("Plugin successfully loaded!");
-		getConfig().options().copyDefaults();
-		saveConfig();
 	}
+	@Override
 	public void onDisable()
 	{
 		System.out.println("Plugin shutting down...");

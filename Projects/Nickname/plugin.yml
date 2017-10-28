@@ -1,0 +1,10 @@
+name: Nickname
+version: 1.0.0
+main: xyz.yetimountain.Z4mbi3.Nickname
+description: Edit the user's server ingame name
+commands:
+  nickname:
+    description: Change ingame name for the server
+    aliases: [nick]
+    usage: |
+           /<command> <player> <name>  

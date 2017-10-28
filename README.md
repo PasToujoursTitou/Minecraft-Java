@@ -1,7 +1,7 @@
 Minecraft plugins project collaboration of multiple Java coders
 -----------------------------------------------------------------
 
-Visit us [here](https://github.com/TheTeamGhost/zombieland/archive/master.zip) (COMMING SOON)
+Visit us [here](http://yetimountain.xyz) (COMMING SOON)
 
 Installation
 -----------------

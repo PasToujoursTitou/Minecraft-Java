@@ -1,0 +1,13 @@
+name: SpawnCommand
+version: 1.0.0
+main: xyz.yetimountain.Z4mbi3.Main
+description: Setspawn and Spawn command
+commands:
+  setspawn:
+    description: Sets spawn at player location
+    usage: |
+           /<command>
+  spawn:
+    description: Teleports the player to spawn
+    usage: |
+           /<command>

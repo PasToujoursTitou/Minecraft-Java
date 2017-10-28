@@ -50,7 +50,7 @@ public class Main extends JavaPlugin implements Listener
 			}
 			else
 			{
-				player.sendMessage(ChatColor.RED + "You have no permissions to use this command!");
+				player.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
 			}
 			return true;
 		}

@@ -1,5 +1,6 @@
 package xyz.yetimountain.Z4mbi3;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -25,13 +26,27 @@ public class Nickname extends JavaPlugin implements Listener
 	public boolean onCommand(CommandSender sender, Command cmd, String Label, String[] args)
 	{
 		Player player = (Player) sender;
+		String name = player.getName();
+		String nick = player.getCustomName();
 		if(cmd.getName().equalsIgnoreCase("nickname"))
 		{
-			player.getPlayerListName();
-			player.setPlayerListName("<name>");
-			player.setDisplayName("<name>");
-			return true;
+			if(args.length == 0)
+			{
+				player.sendMessage(ChatColor.RED + "Try to use /nickname (name) (nickname).");
+			}
+			else
+			{
+				if(args[0].equals(name))
+				{
+					player.sendMessage(ChatColor.RED + "Try to use /nickname (name) (nickname).");
+				}
+				if(args[0].equals(name) && args[1].equals(nick))
+				{
+					player.setDisplayName(ChatColor.translateAlternateColorCodes('§', "§e" + player.getDisplayName()));
+				}
+			}
 		}
+		
 		return false;
 	}
 }

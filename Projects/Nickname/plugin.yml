@@ -7,4 +7,4 @@ commands:
     description: Change ingame name for the server
     aliases: [nick]
     usage: |
-           /<command> <player> <name>  
+           /<command> <name> <nick>  

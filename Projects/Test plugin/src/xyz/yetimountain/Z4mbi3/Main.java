@@ -16,9 +16,7 @@ public class Main extends JavaPlugin implements Listener{
 	
 	@Override
 	public void onEnable() {
-		getConfig().options().copyDefaults(true);
 		getServer().getPluginManager().registerEvents(this,this);
-		        saveConfig();
     }
 
 	

@@ -1,7 +1,8 @@
 Minecraft plugins project collaboration of multiple Java coders
 -----------------------------------------------------------------
 
-Visit us [here](http://yetimountain.xyz) (COMMING SOON)
+Visit us [here](http://yetimountain.xyz) (COMING SOON)
+Get your plugins from [here](https://github.com/TheTeamGhost/Minecraft-Java/)
 
 Installation
 -----------------

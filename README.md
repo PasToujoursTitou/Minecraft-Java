@@ -6,7 +6,7 @@ Visit us [here](http://yetimountain.xyz) (COMING SOON)
 
 Installation
 -----------------
-Just place the files into your plugins folder on your server. Keep in mind these plugins are made for Spigot/Bukkit servers!
+Just place the files into your plugins folder on your server. <br>Keep in mind these plugins are made for Spigot/Bukkit servers! This will not work on Vanilla Minecraft Servers!!!
 
 ! ! ! DISCLAIMER ! ! !
 --------------------------------

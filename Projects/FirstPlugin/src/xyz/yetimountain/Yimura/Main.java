@@ -8,16 +8,26 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin
 {
+	public static final String ANSI_RESET = "\u001B[0m"; 
+	public static final String ANSI_BLACK = "\u001B[30m"; 
+	public static final String ANSI_RED = "\u001B[31m"; 
+	public static final String ANSI_GREEN = "\u001B[32m"; 
+	public static final String ANSI_YELLOW = "\u001B[33m"; 
+	public static final String ANSI_BLUE = "\u001B[34m"; 
+	public static final String ANSI_PURPLE = "\u001B[35m"; 
+	public static final String ANSI_CYAN = "\u001B[36m"; 
+	public static final String ANSI_WHITE = "\u001B[37m";
+	
 	@Override
 	public void onEnable()
 	{
-		this.getLogger().info("Plugin fully loaded!");
+		System.out.printIn(ANSI_GREEN + "Plugin fully loaded!")
 	}
 
 	@Override
 	public void onDisable() 
 	{
-		this.getLogger().info("Plugin has shut down!");
+		System.out.printIn(ANSI_RED + "Plugin has been disabled...")
 	}
 
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
@@ -52,7 +62,7 @@ public class Main extends JavaPlugin
 				}
 				else
 				{
-					sender.sendMessage(ChatColor.RED"Usage: \"gm <0/1/2/3>\".");
+					sender.sendMessage("Usage: \"gm <0/1/2/3>\".");
 					return true;
 				}
 			}

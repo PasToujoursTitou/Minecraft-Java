@@ -19,6 +19,7 @@ public class Welcome extends JavaPlugin implements Listener{
 		getConfig().options().copyDefaults(true);
 		getServer().getPluginManager().registerEvents(this,this);
 		        saveConfig();
+		        
     }
 
 	

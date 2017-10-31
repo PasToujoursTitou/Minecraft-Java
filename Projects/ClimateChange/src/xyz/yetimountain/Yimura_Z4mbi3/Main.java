@@ -4,6 +4,7 @@ import java.util.*;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.block.Biome;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -42,10 +43,10 @@ public class Main extends JavaPlugin implements Listener
   @Override
   public boolean onCommand(CommandSender sender, Command cmd, String Label, String[] args)
   {
-    if(cmd.getName().equalsIgnoreCase("climate help")
+    if(cmd.getName().equalsIgnoreCase("climate help"))
     {
-        sender.sendMessage(ChatColor.CYAN + "This plugin will track in which biome you're situated in.");
-        sender.sendMessage(ChatColor.CYAN + "Based on that, conditions will be added onto you.");
+        sender.sendMessage(ChatColor.BLUE + "This plugin will track in which biome you're situated in.");
+        sender.sendMessage(ChatColor.BLUE + "Based on that, conditions will be added onto you.");
         return true;
     }
     return false;
@@ -56,10 +57,10 @@ public class Main extends JavaPlugin implements Listener
   {
       Player player = event.getPlayer();
       Location loc = player.getLocation();
-      biome = loc.getWorld().getBiome(loc.getBlockX(), loc.getBlockZ);
+      Biome biome = loc.getWorld().getBiome(loc.getBlockX(), loc.getBlockZ());
       double player_health = player.getHealthScale();
  
-      if(biome == "ICE_MOUNTAINS" || biome == "FROZEN_OCEAN" || biome == "FROZEN_RIVER" || biome == "ICE_FLATS")
+      if(biome.equals(Biome.ICE_MOUNTAINS) || biome.equals(Biome.FROZEN_OCEAN) || biome.equals(Biome.FROZEN_RIVER) || biome.equals(Biome.ICE_FLATS))
       {
           Timer timer = new Timer();
           timer.schedule(new TimerTask() 
@@ -82,7 +83,7 @@ public class Main extends JavaPlugin implements Listener
               }
           }, damagetimer*60); //config time...
       }
-      else if(biome == "DESSERT")
+      else if(biome.equals(Biome.DESERT))
       {
           //TODO later
       }

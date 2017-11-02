@@ -58,11 +58,12 @@ public class Main extends JavaPlugin implements Listener
       Player player = event.getPlayer();
       Location loc = player.getLocation();
       Biome biome = loc.getWorld().getBiome(loc.getBlockX(), loc.getBlockZ());
-      double player_health = player.getHealthScale();
- 
+      
+      //Cold biome
       if(biome.equals(Biome.ICE_MOUNTAINS) || biome.equals(Biome.FROZEN_OCEAN) || biome.equals(Biome.FROZEN_RIVER) || biome.equals(Biome.ICE_FLATS))
       {
           Timer timer = new Timer();
+
           timer.schedule(new TimerTask() 
           {
               int slow = this.getConfig().getInt("timers.slow");
@@ -83,6 +84,8 @@ public class Main extends JavaPlugin implements Listener
               }
           }, damagetimer*60); //config time...
       }
+      
+      //Warm biome
       else if(biome.equals(Biome.DESERT))
       {
           //TODO later

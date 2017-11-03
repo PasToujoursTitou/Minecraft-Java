@@ -19,6 +19,7 @@ public class Welcome extends JavaPlugin implements Listener{
 		getConfig().options().copyDefaults(true);
 		getServer().getPluginManager().registerEvents(this,this);
 		        saveConfig();
+		        
     }
 
 	
@@ -28,7 +29,7 @@ public class Welcome extends JavaPlugin implements Listener{
 		Player player = event.getPlayer();
 		if(player.hasPlayedBefore())
 		{
-			event.setJoinMessage(ChatColor.GREEN + player.getName() + " has connected to the server !");
+			event.setJoinMessage(ChatColor.GREEN + player.getName() + " has connected to the server!");
 		}
 		else
 		{

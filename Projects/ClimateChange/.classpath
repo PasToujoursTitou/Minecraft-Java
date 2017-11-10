@@ -2,6 +2,12 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="D:/User/Documents/GitHub/Minecraft-Java/Spigot/spigot-1.12.2.jar"/>
+=======
+	<classpathentry kind="lib" path="C:/Users/Admin/Downloads/spigot-1.12.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mike Van Camp/Documents/GitHub/Minecraft-Java/Spigot/spigot-1.12.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/mv220900/Desktop/Minecraft-Java-master/Spigot/spigot-1.12.2.jar"/>
+>>>>>>> 6e15642c7f5faf855193b2382e353ede8957393c
 	<classpathentry kind="output" path="bin"/>
 </classpath>

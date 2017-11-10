@@ -24,6 +24,8 @@ public class Main extends JavaPlugin implements Listener
   public static final String ANSI_PURPLE = "\u001B[35m"; 
   public static final String ANSI_CYAN = "\u001B[36m"; 
   public static final String ANSI_WHITE = "\u001B[37m";
+  private int damage;
+  private int slow;
   
   @Override
   public void onEnable()
@@ -72,7 +74,7 @@ public class Main extends JavaPlugin implements Listener
               {
                   //Slowing of player after a set amount of time
               }
-          }, slowtimer*60); //config time...
+          }, slow*60); //config time...
           
           timer.schedule(new TimerTask() 
           {
@@ -82,7 +84,7 @@ public class Main extends JavaPlugin implements Listener
               {
                   //Damaging of player after a set amount of time
               }
-          }, damagetimer*60); //config time...
+          }, damage*60); //config time...
       }
       
       //Warm biome

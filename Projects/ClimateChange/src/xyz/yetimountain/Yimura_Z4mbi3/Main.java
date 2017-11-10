@@ -72,7 +72,7 @@ public class Main extends JavaPlugin implements Listener
               {
                   //Slowing of player after a set amount of time
               }
-          }, slowtimer*60); //config time...
+          }, slow*60); //config time...
           
           timer.schedule(new TimerTask() 
           {
@@ -82,7 +82,7 @@ public class Main extends JavaPlugin implements Listener
               {
                   //Damaging of player after a set amount of time
               }
-          }, damagetimer*60); //config time...
+          }, damage*60); //config time...
       }
       
       //Warm biome

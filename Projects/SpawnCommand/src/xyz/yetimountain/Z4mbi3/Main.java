@@ -46,11 +46,11 @@ public class Main extends JavaPlugin implements Listener
 				world.getSpawnLocation().setPitch(pitch);
 				world.getSpawnLocation().setYaw(yaw);
 				
-				player.sendMessage(ChatColor.LIGHT_PURPLE + "Spawn has been set to " + x + " " + y + " " + z +".");
+				player.sendMessage("§dSpawn has been set to " + x + " " + y + " " + z +".");
 			}
 			else
 			{
-				player.sendMessage(ChatColor.RED + "You do not have permission to use this command!");
+				player.sendMessage("§cYou do not have permission to use this command!");
 			}
 			return true;
 		}
@@ -58,7 +58,7 @@ public class Main extends JavaPlugin implements Listener
 		{
 			if(world.getSpawnLocation() == null)
 			{
-				player.sendMessage(ChatColor.RED + "Spawn has not been set yet.");
+				player.sendMessage("§cSpawn has not been set yet.");
 			}
 			else
 			{
